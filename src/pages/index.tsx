@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 import * as React from "react"
-import Layout from "../components/Layout"
+import Layout from "components/Layout"
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema

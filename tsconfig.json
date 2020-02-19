@@ -17,6 +17,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "rootDir": "src",
+    "paths": {
+      "components": ["./components/*"],
+      "pages": ["./pages/*"],
+      "utils": ["./utils/*"]
+    }
   }
 }
