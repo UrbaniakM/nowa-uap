@@ -1,8 +1,14 @@
 import * as React from "react"
+import { Footer } from "./Footer"
 
 const MainLayout: React.FC = ({ children }) => (
   <div>
-    {children}
+    <div>
+      {children}
+    </div>
+    <div>
+      <Footer />
+    </div>
   </div>
 )
 
