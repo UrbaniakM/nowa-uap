@@ -19,6 +19,7 @@
     "noEmit": true,
     "skipLibCheck": true,
     "rootDir": "src",
+    "baseUrl": "./src",
     "paths": {
       "components": ["./components/*"],
       "pages": ["./pages/*"],
