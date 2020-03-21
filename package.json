@@ -23,7 +23,6 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@shopify/polaris": "^4.13.1",
     "gatsby": "^2.19.18",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-typescript": "^2.1.27",
