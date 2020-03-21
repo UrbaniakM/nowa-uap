@@ -1,8 +1,17 @@
 import * as React from "react"
 import { Footer } from "./components/Footer"
 import { TopMenu } from "./components/TopMenu";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalCssStyles = createGlobalStyle`
+  body {
+    background-color: #E5E5E5;
+  }
+`
 
 const MainLayout: React.FC = ({ children }) => (
+  <>
+    <GlobalCssStyles />
     <div>
       <TopMenu />
       <div>
@@ -12,6 +21,7 @@ const MainLayout: React.FC = ({ children }) => (
         <Footer />
       </div>
     </div>
+  </>
 )
 
-export default MainLayout
+export default MainLayout;

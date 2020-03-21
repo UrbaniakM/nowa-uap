@@ -10,6 +10,9 @@ const StyledRouterLink = styled(RouterLink)`
   color: ${props => props.theme.colorPalette.textSecondary};
   text-decoration: none;
   padding: ${props => props.theme.spacing(0, 2)};
+  &:hover {
+    color: ${props => props.theme.colorPalette.textPrimary};
+  }
 `;
 
 export const Link: React.FC<LinkProps> = ({ to, children }) => {
