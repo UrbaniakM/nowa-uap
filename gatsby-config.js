@@ -23,6 +23,18 @@ module.exports = {
         path: `./src/data/`,
         createChildNodes: true
       },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Source Sans Pro"
+            },
+          ]
+        }
+      }
     }
   ]
 }
