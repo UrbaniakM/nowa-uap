@@ -1,6 +1,6 @@
 import { TypographyTheme, typographyTheme } from "./typography";
 import { ColorPalette, colorPaletteTheme } from "./colorPalette";
-import { Spacing, spacing } from "./spacing";
+import { Spacing, spacingFunction } from "./spacing";
 import 'styled-components'
 
 export interface Theme {
@@ -12,7 +12,7 @@ export interface Theme {
 export const theme: Theme = {
   typography: typographyTheme,
   colorPalette: colorPaletteTheme,
-  spacing
+  spacing: spacingFunction(8)
 }
 
 declare module 'styled-components' {
