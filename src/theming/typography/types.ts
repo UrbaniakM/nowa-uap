@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 
 // https://atlassian.design/guidelines/product/foundations/typography
-export type TypographyStyle = 'h800' | 'h700' | 'h600' | 'h500' | 'h400' | 'h300' | 'h200' | 'h100' | 'body' | 'button';
+export type TypographyStyle = 'heading' | 'body';
 
 export interface FontStyle {
   fontFamily: CSSProperties['fontFamily'];
