@@ -27,7 +27,8 @@
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-typescript": "^2.1.27",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-jss": "^10.1.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.20",
