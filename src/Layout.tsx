@@ -6,6 +6,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalCssStyles = createGlobalStyle`
   body {
     background-color: #E5E5E5;
+    margin: 0;
+    color: ${props => props.theme.colorPalette.textPrimary}
   }
 `
 
