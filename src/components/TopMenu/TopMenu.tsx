@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: ${props => props.theme.spacing(4)}
+  padding: ${props => props.theme.spacing(2, 4)}
 `
 
 export const TopMenu: React.FC = () => {
