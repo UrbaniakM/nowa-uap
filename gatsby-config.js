@@ -13,6 +13,14 @@ module.exports = {
           "utils": "src/utils"
         }
       }
+    },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+        createChildNodes: true
+      },
     }
   ]
 }
