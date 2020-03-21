@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: ${props => props.theme.spacing(2, 0)}
+  padding: ${props => props.theme.spacing(3, 4)}
 `
 
 export const TopMenu: React.FC = () => {
@@ -14,7 +14,7 @@ export const TopMenu: React.FC = () => {
     <Wrapper>
       <Link to={'/'}>Strona główna</Link>
       <Link to={'/events'}>Wydarzenia</Link>
-      <Link to={'/statute'}>Status</Link>
+      <Link to={'/statute'}>Statut</Link>
       <Link to={'/contact'}>Kontakt</Link>
     </Wrapper>
   )

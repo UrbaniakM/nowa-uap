@@ -16,7 +16,6 @@ const AppWrapper = styled.div`
   max-width: 1200px;
   justify-content: center;
   margin: auto;
-  padding: ${props => props.theme.spacing(2, 6)}
 `
 
 const MainLayout: React.FC = ({ children }) => (
@@ -27,9 +26,7 @@ const MainLayout: React.FC = ({ children }) => (
       <div>
         {children}
       </div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </AppWrapper>
   </>
 )
