@@ -5,9 +5,15 @@ import { ThemeProvider } from './src/theming/ThemeProvider';
 export const wrapRootElement = ({ element }) => {
   return (
     <ThemeProvider>
-      <Layout>
-        {element}
-      </Layout>
+      {element}
     </ThemeProvider>
   );
+}
+
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <Layout>
+      {element}
+    </Layout>
+  )
 }
