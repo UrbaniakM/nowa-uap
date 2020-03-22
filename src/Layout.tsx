@@ -10,6 +10,14 @@ const GlobalCssStyles = createGlobalStyle`
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+    }
+  }
 `
 
 const AppWrapper = styled.div`

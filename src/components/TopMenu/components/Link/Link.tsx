@@ -12,8 +12,9 @@ interface StyledRouterLinkProps {
 
 const StyledRouterLink = styled(RouterLink)<StyledRouterLinkProps>`
   color: ${props => props.active ? props.theme.colorPalette.textPrimary : props.theme.colorPalette.textSecondary};
-  text-decoration: none;
+  text-transform: uppercase;
   padding: ${props => props.theme.spacing(0, 2)};
+
   &:hover {
     color: ${props => props.theme.colorPalette.textPrimary};
   }
