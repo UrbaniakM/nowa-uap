@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Event } from './components';
 
 export const eventsQuery = graphql`
   query EventsQuery {
@@ -28,10 +29,7 @@ export const EventsPage: React.FC = () => {
     <div>
       <div>Wydarzenia - aktualne i przeszłe</div>
       {events.map((event, index) => (
-        <div key={index}>
-          {event.date}
-          {event.name}
-        </div>
+        <Event key={index} date={event.date} name={event.name}/>
       ))}
     </div>
   )
