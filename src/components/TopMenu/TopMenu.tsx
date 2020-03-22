@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   max-width: 1200px;
   & > :first-child {
     margin-right: auto;
+    margin-left: ${props => props.theme.spacing(4)};
   }
 `
 const NowaLogo = styled(BlackNowaLogo)`
