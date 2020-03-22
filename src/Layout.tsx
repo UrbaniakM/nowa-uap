@@ -1,7 +1,6 @@
 import * as React from "react"
-import { Footer } from "./components/Footer"
-import { TopMenu } from "./components/TopMenu";
 import styled, { createGlobalStyle } from "styled-components";
+import { Footer, TopMenu } from "components/";
 
 const GlobalCssStyles = createGlobalStyle`
   body {
