@@ -4,10 +4,12 @@ import styled, { StyledFunction } from 'styled-components';
 
 export interface LinkProps {
   to: string;
+  className?: string;
 }
 
 interface StyledRouterLinkProps {
   active?: boolean;
+  className?: string;
 }
 
 const StyledRouterLink = styled(RouterLink)<StyledRouterLinkProps>`
@@ -20,11 +22,11 @@ const StyledRouterLink = styled(RouterLink)<StyledRouterLinkProps>`
   }
 `;
 
-export const Link: React.FC<LinkProps> = ({ to, children }) => {
+export const Link: React.FC<LinkProps> = ({ to, className, children }) => {
   const match = useMatch(to);
 
   return (
-    <StyledRouterLink to={to} active={!!match}>
+    <StyledRouterLink to={to} active={!!match} className={className}>
       {children}
     </StyledRouterLink>
   )
