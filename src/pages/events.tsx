@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Event } from './components';
+import { Event } from 'components/Event';
 import styled from 'styled-components';
 import chunk from 'lodash/chunk';
 
@@ -38,7 +38,7 @@ const EventColumn = styled(Event)`
   flex: 1;
 `
 
-export const EventsPage: React.FC = () => {
+const EventsPage: React.FC = () => {
   const { eventsJson: { events } } = useStaticQuery<EventsQuery>(eventsQuery);
   const eventsRows = chunk(events, 2)
 
@@ -55,3 +55,5 @@ export const EventsPage: React.FC = () => {
     </div>
   )
 }
+
+export default EventsPage;
