@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { useRoutingQuery } from 'utils/useRoutingQuery';
+import { Link } from '@reach/router';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,12 +12,15 @@ const Wrapper = styled.div`
 `
 
 export const Footer: React.FC = () => {
+  const pages = useRoutingQuery();
+
   return (
     <Wrapper>
-      <div>Footer</div>
-      <div>Footer</div>
-      <div>Footer</div>
-      <div>Footer</div>
+      {pages.map(({ name, route }) => (
+        <Link to={route}>
+          {name}
+        </Link>
+      ))}
     </Wrapper>
   )
 }
