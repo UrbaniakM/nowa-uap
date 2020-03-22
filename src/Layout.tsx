@@ -18,6 +18,12 @@ const GlobalCssStyles = createGlobalStyle`
       color: inherit;
     }
   }
+  @font-face {
+    font-family: "Logo Font";
+    src: url("/fonts/logo-font.woff")
+    format("woff");
+  }
+}
 `
 
 const AppWrapper = styled.div`
