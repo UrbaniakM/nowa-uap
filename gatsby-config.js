@@ -31,8 +31,9 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Source Sans Pro",
-              variants: ["400", "600"]
+              family: 'Source Sans Pro',
+              variants: ['400', '600'],
+              subsets: ['latin', 'latin-ext']
             }
           ]
         }
