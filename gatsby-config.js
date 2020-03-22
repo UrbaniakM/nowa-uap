@@ -11,8 +11,8 @@ module.exports = {
         route: '/events'
       },
       {
-        name: 'Status',
-        route: '/statue'
+        name: 'Statut',
+        route: '/statute'
       },
       {
         name: 'Kontakt',

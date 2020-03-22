@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components'
 import { Link } from './components';
+import { useRoutingQuery } from 'utils/useRoutingQuery';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,12 +11,15 @@ const Wrapper = styled.div`
 `
 
 export const TopMenu: React.FC = () => {
+  const pages = useRoutingQuery();
+
   return (
     <Wrapper>
-      <Link to={'/'}>Strona główna</Link>
-      <Link to={'/events'}>Wydarzenia</Link>
-      <Link to={'/statute'}>Statut</Link>
-      <Link to={'/contact'}>Kontakt</Link>
+      {pages.map(({ name, route }) => (
+        <Link to={route}>
+          {name}
+        </Link>
+      ))}
     </Wrapper>
   )
 }
