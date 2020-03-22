@@ -3,11 +3,12 @@ import * as React from 'react';
 export interface EventProps {
   name: string;
   date: string;
+  className?: string;
 }
 
-export const Event: React.FC<EventProps> = ({ name, date }) => {
+export const Event: React.FC<EventProps> = ({ name, date, className }) => {
   return (
-    <div>
+    <div className={className}>
       {date}
       {name}
     </div>
