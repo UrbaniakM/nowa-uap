@@ -17,6 +17,7 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-yaml`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

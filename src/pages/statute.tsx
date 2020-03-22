@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 export const statuteQuery = graphql`
   query GoalsQuery {
-    dataYaml {
+    goalsYaml {
       title
       content {
         item
@@ -13,7 +13,7 @@ export const statuteQuery = graphql`
 `
 
 interface StatuteQuery {
-  dataYaml: {
+  goalsYaml: {
     title: string;
     content: {
       item: string;
@@ -22,14 +22,13 @@ interface StatuteQuery {
 }
 
 const StatutePage: React.FC = () => {
-  const { dataYaml: { title, content } } = useStaticQuery<StatuteQuery>(statuteQuery);
-  console.log(title, content);
+  const { goalsYaml: { title, content } } = useStaticQuery<StatuteQuery>(statuteQuery);
 
   return (
     <div>
       <div>{title}</div>
-      {content.map(point => (
-        <div>
+      {content.map((point, index) => (
+        <div key={index}>
           - {point.item}
         </div>
       ))}

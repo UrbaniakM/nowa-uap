@@ -1,0 +1,12 @@
+{
+  "events": [
+    {
+      "name": "Wydarzenie nr 1",
+      "date": "Date event nr 1"
+    },
+    {
+      "name": "Wydarzenie nr 2",
+      "date": "Date event nr 2"
+    }
+  ]
+}
