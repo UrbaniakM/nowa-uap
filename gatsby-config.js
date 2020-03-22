@@ -1,6 +1,24 @@
 module.exports = {
   siteMetadata: {
-    siteName: `Nowa UAP`
+    siteName: `Nowa UAP`,
+    pages: [
+      {
+        name: 'Strona główna',
+        route: '/'
+      },
+      {
+        name: 'Wydarzenia',
+        route: '/events'
+      },
+      {
+        name: 'Status',
+        route: '/statue'
+      },
+      {
+        name: 'Kontakt',
+        route: '/contact'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-typescript`,
