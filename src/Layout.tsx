@@ -21,13 +21,17 @@ const GlobalCssStyles = createGlobalStyle`
 `
 
 const AppWrapper = styled.div`
-  max-width: 1200px;
-  justify-content: center;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > * {
+    width: 100%;
+  }
 `
 
 const AppContent = styled.div`
-  margin: ${props => props.theme.spacing(0, 4)}
+  margin: ${props => props.theme.spacing(0, 6)};
+  max-width: 1200px;
 `
 
 const MainLayout: React.FC = ({ children }) => (
@@ -35,9 +39,11 @@ const MainLayout: React.FC = ({ children }) => (
     <GlobalCssStyles />
     <AppWrapper>
       <TopMenu />
-      <AppContent>
-        {children}
-      </AppContent>
+      <div>
+        <AppContent>
+          {children}
+        </AppContent>
+      </div>
       <Footer />
     </AppWrapper>
   </>
