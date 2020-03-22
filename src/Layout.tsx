@@ -18,14 +18,18 @@ const AppWrapper = styled.div`
   margin: auto;
 `
 
+const AppContent = styled.div`
+  margin: ${props => props.theme.spacing(0, 4)}
+`
+
 const MainLayout: React.FC = ({ children }) => (
   <>
     <GlobalCssStyles />
     <AppWrapper>
       <TopMenu />
-      <div>
+      <AppContent>
         {children}
-      </div>
+      </AppContent>
       <Footer />
     </AppWrapper>
   </>
