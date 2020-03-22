@@ -21,9 +21,8 @@ interface EventsQuery {
   }
 }
 
-const EventsPage: React.FC = () => {
+export const EventsPage: React.FC = () => {
   const { eventsJson: { events } } = useStaticQuery<EventsQuery>(eventsQuery);
-  console.log(events);
 
   return (
     <div>
@@ -37,5 +36,3 @@ const EventsPage: React.FC = () => {
     </div>
   )
 }
-
-export default EventsPage;
