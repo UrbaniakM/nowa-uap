@@ -12,3 +12,6 @@ public/
 
 # IDE
 .vscode
+
+# Macbook
+.DS_Store
