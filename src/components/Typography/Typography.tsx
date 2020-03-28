@@ -12,7 +12,7 @@ const StyledTypography = styled.div<TypographyProps>`
   font-size: ${props => props.theme.typography[props.variant].fontSize}px;
   font-style: ${props => props.theme.typography[props.variant].fontStyle || 'normal'};
   font-weight: ${props => props.theme.typography[props.variant].fontWeight};
-  text-align: ${props => props.textAlign || 'initial'}l
+  text-align: ${props => props.textAlign || 'initial'};
   text-transform: ${props => props.theme.typography[props.variant].textTransform || 'none'};
 `
 
