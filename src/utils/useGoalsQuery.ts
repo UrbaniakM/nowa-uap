@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-export const statuteQuery = graphql`
+export const goalsQuery = graphql`
   query GoalsQuery {
     goalsYaml {
       title
@@ -11,7 +11,7 @@ export const statuteQuery = graphql`
   }
 `
 
-export interface StatuteQuery {
+export interface GoalsQuery {
   goalsYaml: {
     title: string;
     content: {
@@ -20,8 +20,8 @@ export interface StatuteQuery {
   }
 }
 
-export const useStatueQuery = () => {
-  const { goalsYaml } = useStaticQuery<StatuteQuery>(statuteQuery);
+export const useGoalsQuery = () => {
+  const { goalsYaml } = useStaticQuery<GoalsQuery>(goalsQuery);
 
 
   return goalsYaml;

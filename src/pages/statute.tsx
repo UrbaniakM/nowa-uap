@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { useStatueQuery } from 'utils/useStatueQuery';
+import { useGoalsQuery } from 'utils/useGoalsQuery';
 
 const StatutePage: React.FC = () => {
-  const { title: titleGoals, content: contentGoals } = useStatueQuery();
+  const { title: titleGoals, content: contentGoals } = useGoalsQuery();
 
   return (
     <div>
