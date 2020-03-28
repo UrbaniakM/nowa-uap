@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useGoalsQuery } from 'utils/useGoalsQuery';
 import { useMethodsQuery } from 'utils/useMethodsQuery';
-import { Typography } from 'components/';
+import { Typography, PageTitle } from 'components/';
 
 const StatutePage: React.FC = () => {
   const { title: titleGoals, content: contentGoals } = useGoalsQuery();
@@ -9,7 +9,7 @@ const StatutePage: React.FC = () => {
 
   return (
     <div>
-      <Typography variant='header1'>Cele i zasady działania Fundacji:</Typography>
+      <PageTitle>Cele i zasady działania Fundacji:</PageTitle>
       <Typography variant='header3' textAlign='center'>§ 6</Typography>
       <Typography variant='header3' textAlign='center'>{titleGoals}</Typography>
       {contentGoals.map((point, index) => (
