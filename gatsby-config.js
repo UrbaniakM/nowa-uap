@@ -50,7 +50,7 @@ module.exports = {
           google: [
             {
               family: 'Source Sans Pro',
-              variants: ['400', '600'],
+              variants: ['300i', '400', '400i', '600', '600i', '700'],
               subsets: ['latin', 'latin-ext']
             }
           ]
