@@ -2,13 +2,20 @@ import * as React from 'react';
 import { useGoalsQuery } from 'utils/useGoalsQuery';
 import { useMethodsQuery } from 'utils/useMethodsQuery';
 import { Typography, PageTitle } from 'components/';
+import styled from 'styled-components';
+
+const StatutePageWrapper = styled.div`
+  & > * {
+    padding-bottom: 2px;
+  }
+`
 
 const StatutePage: React.FC = () => {
   const { title: titleGoals, content: contentGoals } = useGoalsQuery();
   const { title: titleMethods, content: contentMethods } = useMethodsQuery();
 
   return (
-    <div>
+    <StatutePageWrapper>
       <PageTitle>Cele i zasady działania Fundacji:</PageTitle>
       <Typography variant='header3' textAlign='center'>§ 6</Typography>
       <Typography variant='header3' textAlign='center'>{titleGoals}</Typography>
@@ -24,7 +31,7 @@ const StatutePage: React.FC = () => {
           {`${index+1}. ${point.item}`}
         </Typography>
       ))}
-    </div>
+    </StatutePageWrapper>
   )
 }
 
