@@ -14,14 +14,14 @@ const StatutePage: React.FC = () => {
       <Typography variant='header3' textAlign='center'>{titleGoals}</Typography>
       {contentGoals.map((point, index) => (
         <Typography variant='body' key={index}>
-          {`${index}. ${point.item}`}
+          {`${index+1}. ${point.item}`}
         </Typography>
       ))}
       <Typography variant='header3' textAlign='center'>§ 7</Typography>
       <Typography variant='header3' textAlign='center'>{titleMethods}</Typography>
       {contentMethods.map((point, index) => (
         <Typography variant='body' key={index}>
-          {`${index}. ${point.item}`}
+          {`${index+1}. ${point.item}`}
         </Typography>
       ))}
     </div>
