@@ -36,6 +36,7 @@ const AppWrapper = styled.div`
 const AppContent = styled.div`
   margin: ${props => props.theme.spacing(0, 6)};
   max-width: 1200px;
+  min-height: 500px;
 `
 
 const MainLayout: React.FC = ({ children }) => (
