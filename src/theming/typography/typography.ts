@@ -43,6 +43,7 @@ export const typographyTheme: TypographyTheme = {
   button: {
     fontFamily: SOURCE_SANS_PRO_FONT,
     fontSize: 14,
-    fontWeight: 700
+    fontWeight: 700,
+    textTransform: 'uppercase'
   }
 }

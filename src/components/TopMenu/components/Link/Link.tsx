@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link as RouterLink, LinkProps as RouterLinkProps, useMatch } from '@reach/router';
-import styled, { StyledFunction } from 'styled-components';
+import styled from 'styled-components';
+import { Typography } from 'components/Typography';
 
 export interface LinkProps {
   to: string;
@@ -14,7 +15,6 @@ interface StyledRouterLinkProps {
 
 const StyledRouterLink = styled(RouterLink)<StyledRouterLinkProps>`
   color: ${props => props.active ? props.theme.colorPalette.textPrimary : props.theme.colorPalette.textSecondary};
-  text-transform: uppercase;
   padding: ${props => props.theme.spacing(0, 2)};
 
   &:hover {
@@ -27,7 +27,9 @@ export const Link: React.FC<LinkProps> = ({ to, className, children }) => {
 
   return (
     <StyledRouterLink to={to} active={!!match} className={className}>
-      {children}
+      <Typography variant='button'>
+        {children}
+      </Typography>
     </StyledRouterLink>
   )
 }
