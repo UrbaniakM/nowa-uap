@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { useRoutingQuery } from 'utils/useRoutingQuery';
-import { Link } from '@reach/router';
+import { InterfacesLogo } from 'components/Logos/InterfacesLogo';
 
 
 const FooterWrapper = styled.div`
@@ -14,19 +13,22 @@ const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${props => props.theme.spacing(4, 6)};
+  min-height: 100px;
+  justify-content: flex-end;
+`
+
+const FooterLogo = styled(InterfacesLogo)`
+  height: 48px;
+  fill: ${props => props.theme.colorPalette.whitePrimary};
+  margin-left: auto;
 `
 
 export const Footer: React.FC = () => {
-  const pages = useRoutingQuery();
 
   return (
     <FooterWrapper>
       <FooterContent>
-        {pages.map(({ name, route }) => (
-          <Link to={route}>
-            {name}
-          </Link>
-        ))}
+        <FooterLogo />
       </FooterContent>
     </FooterWrapper>
   )
