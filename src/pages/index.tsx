@@ -1,32 +1,3 @@
-import { graphql } from "gatsby"
-import * as React from "react"
+import StatutePage from './statute';
 
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        siteName: string
-      }
-    }
-  }
-}
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        siteName
-      }
-    }
-  }
-`
-
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
-  const { siteName } = data.site.siteMetadata
-
-  return (
-    <p>This site is named <strong>{siteName}</strong></p>
-  );
-}
-
-export default IndexPage;
+export default StatutePage;
