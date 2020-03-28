@@ -5,6 +5,7 @@ import styled, { CSSProperties } from 'styled-components';
 export interface TypographyProps {
   variant: TypographyStyle;
   textAlign?: CSSProperties['textAlign'];
+  className?: string;
 };
 
 const StyledTypography = styled.div<TypographyProps>`
@@ -19,11 +20,12 @@ const StyledTypography = styled.div<TypographyProps>`
 export const Typography: React.FC<TypographyProps> = ({
   variant,
   textAlign,
+  className,
   children
 }) => {
 
   return (
-    <StyledTypography variant={variant} textAlign={textAlign}>
+    <StyledTypography variant={variant} textAlign={textAlign} className={className}>
       {children}
     </StyledTypography>
   )
