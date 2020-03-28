@@ -28,7 +28,7 @@ export const TopMenu: React.FC = () => {
         <NowaLogo />
       </Link>
       {pages.map(({ name, route }) => (
-        <Link to={route}>
+        <Link to={route} key={route}>
           {name}
         </Link>
       ))}
