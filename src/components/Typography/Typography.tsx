@@ -20,7 +20,7 @@ const StyledTypography = styled.div<TypographyProps>`
   text-align: ${props => props.textAlign || 'initial'};
   text-transform: ${props => props.theme.typography[props.variant].textTransform || 'none'};
   padding: ${props => props.theme.spacing(0.25, 0)};
-  color: ${props => props.theme.colorPalette[props.color || 'textPrimary']}
+  color: ${props => props.color ? props.theme.colorPalette[props.color] : undefined}
 `
 
 export const Typography: React.FC<TypographyProps> = ({
