@@ -4,7 +4,6 @@ import { Footer, TopMenu } from "components/";
 
 const GlobalCssStyles = createGlobalStyle`
   body {
-    background-color: #E5E5E5;
     margin: 0;
     color: ${props => props.theme.colorPalette.textPrimary};
     font-family: 'Source Sans Pro', sans-serif;
