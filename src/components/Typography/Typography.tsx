@@ -13,6 +13,7 @@ const StyledTypography = styled.div<TypographyProps>`
   font-style: ${props => props.theme.typography[props.variant].fontStyle || 'normal'};
   font-weight: ${props => props.theme.typography[props.variant].fontWeight};
   text-align: ${props => props.textAlign || 'initial'}
+  text-transform: ${props => props.theme.typography[props.variant].textTransform || 'none'}
 `
 
 export const Typography: React.FC<TypographyProps> = ({
