@@ -4,12 +4,6 @@ import { useMethodsQuery } from 'utils/useMethodsQuery';
 import { Typography, PageTitle } from 'components/';
 import styled from 'styled-components';
 
-const StatutePageWrapper = styled.div`
-  & > * {
-    padding-bottom: 2px;
-  }
-`
-
 const Section = styled.div`
   margin-bottom: ${props => props.theme.spacing(4)};
 `
@@ -19,7 +13,7 @@ const StatutePage: React.FC = () => {
   const { title: titleMethods, content: contentMethods } = useMethodsQuery();
 
   return (
-    <StatutePageWrapper>
+    <div>
       <PageTitle>Cele i zasady działania Fundacji:</PageTitle>
       <Section>
         <Typography variant='header3' textAlign='center'>§ 6</Typography>
@@ -39,7 +33,7 @@ const StatutePage: React.FC = () => {
           </Typography>
         ))}
       </Section>
-    </StatutePageWrapper>
+    </div>
   )
 }
 

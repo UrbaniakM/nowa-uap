@@ -15,6 +15,7 @@ const StyledTypography = styled.div<TypographyProps>`
   font-weight: ${props => props.theme.typography[props.variant].fontWeight};
   text-align: ${props => props.textAlign || 'initial'};
   text-transform: ${props => props.theme.typography[props.variant].textTransform || 'none'};
+  padding: ${props => props.theme.spacing(0.25, 0)}
 `
 
 export const Typography: React.FC<TypographyProps> = ({
