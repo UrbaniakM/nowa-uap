@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useGoalsQuery } from 'utils/useGoalsQuery';
 import { useMethodsQuery } from 'utils/useMethodsQuery';
+import { Typography } from 'components/';
 
 const StatutePage: React.FC = () => {
   const { title: titleGoals, content: contentGoals } = useGoalsQuery();
@@ -8,20 +9,20 @@ const StatutePage: React.FC = () => {
 
   return (
     <div>
-      <div>Cele i zasady działania Fundacji:</div>
-      <div>§ 6</div>
-      <div>{titleGoals}</div>
+      <Typography variant='header1'>Cele i zasady działania Fundacji:</Typography>
+      <Typography variant='header3' textAlign='center'>§ 6</Typography>
+      <Typography variant='header3' textAlign='center'>{titleGoals}</Typography>
       {contentGoals.map((point, index) => (
-        <div key={index}>
-          - {point.item}
-        </div>
+        <Typography variant='body' key={index}>
+          {`${index}. ${point.item}`}
+        </Typography>
       ))}
-      <div>§ 7</div>
-      <div>{titleMethods}</div>
+      <Typography variant='header3' textAlign='center'>§ 7</Typography>
+      <Typography variant='header3' textAlign='center'>{titleMethods}</Typography>
       {contentMethods.map((point, index) => (
-        <div key={index}>
-          - {point.item}
-        </div>
+        <Typography variant='body' key={index}>
+          {`${index}. ${point.item}`}
+        </Typography>
       ))}
     </div>
   )

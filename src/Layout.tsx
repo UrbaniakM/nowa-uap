@@ -8,7 +8,7 @@ const GlobalCssStyles = createGlobalStyle`
     margin: 0;
     color: ${props => props.theme.colorPalette.textPrimary};
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
   }
   a {
     color: inherit;
