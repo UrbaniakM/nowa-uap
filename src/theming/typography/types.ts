@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 
 // https://atlassian.design/guidelines/product/foundations/typography
-export type TypographyStyle = 'heading' | 'body';
+export type TypographyStyle = 'heading1' | 'header2' | 'header3' | 'subtitle' | 'body' | 'caption' | 'quote' | 'button';
 
 export interface FontStyle {
   fontFamily: CSSProperties['fontFamily'];
