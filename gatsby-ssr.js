@@ -1,13 +1,19 @@
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import Layout from './src/Layout';
 import { ThemeProvider } from './src/theming/ThemeProvider';
 
-export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-  const ConnectedBody = () => (
+export const wrapRootElement = ({ element }) => {
+  return (
     <ThemeProvider>
-      {bodyComponent}
+      {element}
     </ThemeProvider>
   );
+}
 
-  replaceBodyHTMLString(renderToString(<ConnectedBody/>))
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <Layout {...props}>
+      {element}
+    </Layout>
+  )
 }
