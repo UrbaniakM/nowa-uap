@@ -6,14 +6,18 @@ import { ColorPalette } from 'theming/colorPalette';
 export type TypographyColor = keyof ColorPalette;
 
 export interface TypographyProps {
-  variant: TypographyStyle;
+  variant?: TypographyStyle;
   textAlign?: CSSProperties['textAlign'];
   color?: TypographyColor;
   component?: React.ElementType;
   className?: string;
 };
 
-const StyledTypography = styled.div<Omit<TypographyProps, 'component'>>`
+interface StyledTypographyProps extends Omit<TypographyProps, 'component'> {
+  variant: NonNullable<TypographyProps['variant']>;
+}
+
+const StyledTypography = styled.div<StyledTypographyProps>`
   font-family: ${props => props.theme.typography[props.variant].fontFamily};
   font-size: ${props => props.theme.typography[props.variant].fontSize}px;
   font-style: ${props => props.theme.typography[props.variant].fontStyle || 'normal'};
@@ -25,7 +29,7 @@ const StyledTypography = styled.div<Omit<TypographyProps, 'component'>>`
 `
 
 export const Typography: React.FC<TypographyProps> = ({
-  variant,
+  variant = 'body',
   textAlign,
   className,
   color,
