@@ -7,6 +7,8 @@ const ImageEvent = styled.img`
   width: 100%;
   border-radius: ${props => props.theme.shape.borderRadius}px ${props => props.theme.shape.borderRadius}px 0 0;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  max-height: 394px;
 `
 
 export interface EventCardProps {
