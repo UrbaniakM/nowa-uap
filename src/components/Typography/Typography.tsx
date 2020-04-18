@@ -9,10 +9,11 @@ export interface TypographyProps {
   variant: TypographyStyle;
   textAlign?: CSSProperties['textAlign'];
   color?: TypographyColor;
+  component?: React.ElementType;
   className?: string;
 };
 
-const StyledTypography = styled.div<TypographyProps>`
+const StyledTypography = styled.div<Omit<TypographyProps, 'component'>>`
   font-family: ${props => props.theme.typography[props.variant].fontFamily};
   font-size: ${props => props.theme.typography[props.variant].fontSize}px;
   font-style: ${props => props.theme.typography[props.variant].fontStyle || 'normal'};
@@ -28,11 +29,12 @@ export const Typography: React.FC<TypographyProps> = ({
   textAlign,
   className,
   color,
+  component = "div",
   children
 }) => {
 
   return (
-    <StyledTypography variant={variant} textAlign={textAlign} className={className} color={color}>
+    <StyledTypography as={component} variant={variant} textAlign={textAlign} className={className} color={color}>
       {children}
     </StyledTypography>
   )
