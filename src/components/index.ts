@@ -3,6 +3,7 @@ export * from './Divider';
 export * from './EventDetails';
 export * from './Footer';
 export * from './ListItem';
+export * from './News';
 export * from './PageTitle';
 export * from './TopMenu';
 export * from './Typography';
