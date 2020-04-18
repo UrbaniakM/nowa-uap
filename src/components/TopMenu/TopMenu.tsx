@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
 `
 const NowaLogo = styled(BlackNowaLogo)`
-  height: 60px;
+  height: 80px;
 `
 
 export const TopMenu: React.FC = () => {
