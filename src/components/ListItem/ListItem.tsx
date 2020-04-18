@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { Typography } from 'components/';
 
-export const ListItem: React.FC = ({ children }) => {
+export interface ListItemProps {
+  className?: string;
+}
+
+export const ListItem: React.FC<ListItemProps> = ({ children, className }) => {
   return (
-    <Typography component='li' variant='body'>
+    <Typography component='li' variant='body' className={className}>
       {children}
     </Typography>
   )
