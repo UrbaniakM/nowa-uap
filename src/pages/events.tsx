@@ -75,7 +75,7 @@ const EventsPage: React.FC = () => {
               text={event.text}
               name={event.name}
               imageUrl={event.imageUrl}
-              href='/event_details'
+              href='/events/event_details'
             />
           ))}
         </Row>
@@ -90,7 +90,7 @@ const EventsPage: React.FC = () => {
               text={event.text}
               name={event.name}
               imageUrl={event.imageUrl}
-              href='/event_details'
+              href='/events/event_details'
             />
           ))}
         </Row>

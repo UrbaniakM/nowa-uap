@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link as RouterLink, LinkProps as RouterLinkProps, useMatch } from '@reach/router';
+import { Link as RouterLink, useMatch } from '@reach/router';
 import styled from 'styled-components';
 import { Typography } from 'components/Typography';
 
