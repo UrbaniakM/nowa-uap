@@ -33,6 +33,7 @@ const Row = styled.div`
   flex-wrap: wrap;
   width: 100%;
   min-height: 394px;
+  margin: ${props => props.theme.spacing(-1)};
 `
 
 const StyledEvent = styled(Event)`
