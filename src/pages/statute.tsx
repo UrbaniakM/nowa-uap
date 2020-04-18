@@ -13,6 +13,12 @@ const StyledListItem = styled(ListItem)`
   list-style-type: decimal;
 `
 
+const SectionHeader = styled.div`
+  background-color: ${props => props.theme.colorPalette.textPrimary};
+  border-radius: ${props => props.theme.shape.borderRadius}px;
+  padding: ${props => props.theme.spacing(0.5, 0)};
+`;
+
 const StatutePage: React.FC = () => {
   const { title: titleGoals, content: contentGoals } = useGoalsQuery();
   const { title: titleMethods, content: contentMethods } = useMethodsQuery();
@@ -21,8 +27,10 @@ const StatutePage: React.FC = () => {
     <div>
       <PageTitle>Cele i zasady działania Fundacji:</PageTitle>
       <Section>
-        <Typography variant='header3' textAlign='center'>§ 6</Typography>
-        <Typography variant='header3' textAlign='center'>{titleGoals}</Typography>
+        <SectionHeader>
+          <Typography variant='header2' textAlign='center' color='whitePrimary'>§ 6</Typography>
+          <Typography variant='header3' textAlign='center' color='whitePrimary'>{titleGoals}</Typography>
+        </SectionHeader>
         <ul>
           {contentGoals.map((point, index) => (
             <StyledListItem key={index}>
@@ -32,8 +40,10 @@ const StatutePage: React.FC = () => {
         </ul>
       </Section>
       <Section>
-        <Typography variant='header3' textAlign='center'>§ 7</Typography>
-        <Typography variant='header3' textAlign='center'>{titleMethods}</Typography>
+        <SectionHeader>
+          <Typography variant='header2' textAlign='center' color='whitePrimary'>§ 7</Typography>
+          <Typography variant='header3' textAlign='center' color='whitePrimary'>{titleMethods}</Typography>
+        </SectionHeader>
         <ul>
           {contentMethods.map((point, index) => (
             <StyledListItem key={index}>
