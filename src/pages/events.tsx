@@ -48,6 +48,7 @@ const StyledEvent = styled(Event)`
   flex-basis: 100%;
   flex: 1;
   max-width: calc(33% - ${props => props.theme.spacing(2)});
+  min-width: 300px;
   margin: ${props => props.theme.spacing(1)};
   & > div {
     height: 100%;

@@ -1,18 +1,26 @@
 import * as React from 'react';
-import { PageTitle, Typography, EventCard, EventInfo } from 'components/';
+import { PageTitle, EventCard, EventInfo } from 'components/';
 import styled from 'styled-components';
 
 const Section = styled.div`
+  max-width: 700px;
   margin-top: ${props => props.theme.spacing(4)};
+  margin-left: auto;
+  margin-right: auto;
+`
+
+const StyledEventCard = styled(EventCard)`
+  margin-left: auto;
+  margin-right: auto;
 `
 
 const ContactPage: React.FC = () => {
   return (
     <div>
       <PageTitle>Phasellus mattis blandit lacinia</PageTitle>
-      <EventCard>
+      <StyledEventCard>
         <EventInfo />
-      </EventCard>
+      </StyledEventCard>
       <Section>
         Integer lacinia suscipit neque, egestas lobortis magna gravida ac. Donec varius tellus id arcu rutrum convallis. Morbi pellentesque sem id diam porttitor, vitae iaculis massa mollis. Donec aliquam neque a cursus laoreet. Nullam fringilla massa odio, vitae interdum tellus accumsan non. Donec porta sit amet est id tempor. Pellentesque in aliquet turpis, dignissim pharetra turpis. Etiam sollicitudin velit justo, nec ultricies magna porttitor eget. Sed eget tellus aliquet, aliquet ligula quis, aliquam nisl. Mauris efficitur lectus ut nisl varius ultricies. Fusce molestie augue ut massa placerat malesuada. Vestibulum a semper arcu. Vivamus sagittis, erat eget tempor dignissim, urna magna blandit nisi, non luctus sem turpis eu lacus.
         </Section>
