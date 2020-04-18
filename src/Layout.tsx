@@ -36,8 +36,11 @@ const AppWrapper = styled.div`
 
 const AppContent = styled.div`
   margin: ${props => props.theme.spacing(0, 6, 8)};
-  max-width: 1200px;
   min-height: 500px;
+`
+
+const AppContentWrapper = styled.div`
+  max-width: 1200px;
 `
 
 const MainLayout: React.FC = ({ children }) => (
@@ -45,11 +48,11 @@ const MainLayout: React.FC = ({ children }) => (
     <GlobalCssStyles />
     <AppWrapper>
       <TopMenu />
-      <div>
+      <AppContentWrapper>
         <AppContent>
           {children}
         </AppContent>
-      </div>
+      </AppContentWrapper>
       <Footer />
     </AppWrapper>
   </>
