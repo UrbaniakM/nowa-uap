@@ -7,6 +7,8 @@ import styled from 'styled-components';
 const Section = styled.div`
   margin-bottom: ${props => props.theme.spacing(4)};
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 const StyledListItem = styled(ListItem)`
