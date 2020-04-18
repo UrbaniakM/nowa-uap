@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Event } from 'components/Event';
 import styled from 'styled-components';
 import chunk from 'lodash/chunk';
@@ -47,9 +47,11 @@ const EventsPage: React.FC = () => {
       <div>Wydarzenia - aktualne i przeszłe</div>
         {eventsRows.map((row, rowIndex) => (
           <Row key={rowIndex}>
-            {row.map((event, eventIndex) =>
-              <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
-            )}
+            {row.map((event, eventIndex) => (
+              <Link to='/event_details'>
+                <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
+              </Link>
+            ))}
           </Row>
         ))}
     </div>
