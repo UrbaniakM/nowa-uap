@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { InterfacesLogo } from 'components/Logos/InterfacesLogo';
+import { FacebookIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from 'components/Icons';
 
 
 const FooterWrapper = styled.div`
@@ -24,11 +25,27 @@ const FooterLogo = styled(InterfacesLogo)`
   margin-left: auto;
 `
 
+const SocialMediaIcons = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  & > svg {
+    width: 32px;
+    margin-right: ${props => props.theme.spacing(2)};
+  }
+`;
+
 export const Footer: React.FC = () => {
 
   return (
     <FooterWrapper>
       <FooterContent>
+        <SocialMediaIcons>
+          <FacebookIcon />
+          <InstagramIcon />
+          <TwitterIcon />
+          <YouTubeIcon />
+        </SocialMediaIcons>
         <FooterLogo />
       </FooterContent>
     </FooterWrapper>
