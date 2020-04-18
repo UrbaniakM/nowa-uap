@@ -10,6 +10,7 @@ export const eventsQuery = graphql`
     eventsJson {
       events {
         name
+        text
         date
       }
     }
@@ -20,6 +21,7 @@ interface EventsQuery {
   eventsJson: {
     events: {
       name: string;
+      text: string;
       date: string;
     }[]
   }
@@ -30,13 +32,19 @@ const Row = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 394px;
 `
 
-const EventColumn = styled(Event)`
+const StyledEvent = styled(Event)`
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  max-width: calc(33% - ${props => props.theme.spacing(2)});
+  margin: ${props => props.theme.spacing(1)};
+  & > * {
+    height: 100%;
+  }
 `
 
 const EventsPage: React.FC = () => {
@@ -54,19 +62,14 @@ const EventsPage: React.FC = () => {
       {eventsCurrentRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
-            <Link to='/event_details'>
-              <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
-            </Link>
-          ))}
+            <StyledEvent key={`${rowIndex} ${eventIndex}`} date={event.date} text={event.text} name={event.name} href='/event_details' />))}
         </Row>
       ))}
       <PageTitle>Ubiegłe wydarzenia</PageTitle>
       {eventsPastRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
-            <Link to='/event_details'>
-              <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
-            </Link>
+            <StyledEvent key={`${rowIndex} ${eventIndex}`} date={event.date} text={event.text} name={event.name} href='/event_details' />
           ))}
         </Row>
       ))}
