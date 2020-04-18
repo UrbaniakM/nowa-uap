@@ -3,32 +3,38 @@
     {
       "name": "Pellentesque pharetra est nec nunc",
       "text": "Duis accumsan scelerisque lacus vitae finibus. Vestibulum condimentum blandit sapien, id faucibus elit scelerisque sed.",
-      "date": "25.06.2020"
+      "date": "25.06.2020",
+      "imageUrl": "/events/event0.jpeg"
     },
     {
       "name": "Phasellus mattis blandit lacinia",
       "text": "Nunc pellentesque dignissim tristique. Etiam ornare, leo vitae placerat varius, ligula erat placerat mauris, id euismod nunc dolor a ipsum.",
-      "date": "27.06.2020"
+      "date": "27.06.2020",
+      "imageUrl": "/events//event1.jpeg"
     },
     {
       "name": "Proin eget nibh eget augue pharetra mattis",
       "text": "Integer ullamcorper, nisl et tempor mattis, lorem odio maximus lorem, tempor fringilla libero dolor at sapien.",
-      "date": "19.03.2020"
+      "date": "19.03.2020",
+      "imageUrl": "/events/event2.jpeg"
     },
     {
       "name": "Aliquam erat volutpat",
       "text": "Proin eget nibh eget augue pharetra mattis. Integer ullamcorper, nisl et tempor mattis, lorem odio maximus lorem, tempor fringilla libero dolor at sapien.",
-      "date": "17.03.2020"
+      "date": "17.03.2020",
+      "imageUrl": "/events/event3.jpeg"
     },
     {
       "name": "Etiam non leo ac nunc commodo posuere",
       "text": "Sed id massa felis. Nam interdum nibh nec neque eleifend cursus. Suspendisse potenti. Curabitur cursus maximus arcu tempor placerat.",
-      "date": "15.03.2020"
+      "date": "15.03.2020",
+      "imageUrl": "/events/event4.jpeg"
     },
     {
       "name": "Fusce sed nisl lacus",
       "text": "Ut et nibh pharetra, consectetur lorem quis, elementum metus. Nullam ut mollis mauris, ut pharetra ex. Nam cursus sagittis neque, ut fermentum metus sollicitudin at.",
-      "date": "12.03.2020"
+      "date": "12.03.2020",
+      "imageUrl": "/events/event5.jpeg"
     }
   ]
 }

@@ -8,6 +8,7 @@ export interface EventProps {
   text: string;
   date: string;
   href: string;
+  imageUrl: string;
   className?: string;
 }
 
@@ -35,9 +36,17 @@ const CardContentFooter = styled.div`
   margin-bottom: ${props => props.theme.spacing(1)};
 `;
 
-export const Event: React.FC<EventProps> = ({ name, date, text, href, className }) => {
+const EventImg = styled.img`
+  max-width: 100%;
+  max-height: 190px;
+  object-fit: cover;
+  border-radius: ${props => props.theme.shape.borderRadius}px ${props => props.theme.shape.borderRadius}px 0 0;
+`
+
+export const Event: React.FC<EventProps> = ({ name, date, text, href, imageUrl, className }) => {
   return (
     <StyledCard className={className}>
+      <EventImg src={imageUrl} />
       <StyledCardContent>
         <Typography variant='subtitle'>
           {name}

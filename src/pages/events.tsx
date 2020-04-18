@@ -12,6 +12,7 @@ export const eventsQuery = graphql`
         name
         text
         date
+        imageUrl
       }
     }
   }
@@ -23,6 +24,7 @@ interface EventsQuery {
       name: string;
       text: string;
       date: string;
+      imageUrl: string;
     }[]
   }
 }
@@ -43,7 +45,7 @@ const StyledEvent = styled(Event)`
   flex: 1;
   max-width: calc(33% - ${props => props.theme.spacing(2)});
   margin: ${props => props.theme.spacing(1)};
-  & > * {
+  & > div {
     height: 100%;
   }
 `
@@ -63,14 +65,29 @@ const EventsPage: React.FC = () => {
       {eventsCurrentRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
-            <StyledEvent key={`${rowIndex} ${eventIndex}`} date={event.date} text={event.text} name={event.name} href='/event_details' />))}
+            <StyledEvent
+              key={`${rowIndex}${eventIndex}`}
+              date={event.date}
+              text={event.text}
+              name={event.name}
+              imageUrl={event.imageUrl}
+              href='/event_details'
+            />
+          ))}
         </Row>
       ))}
       <PageTitle>Ubiegłe wydarzenia</PageTitle>
       {eventsPastRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
-            <StyledEvent key={`${rowIndex} ${eventIndex}`} date={event.date} text={event.text} name={event.name} href='/event_details' />
+            <StyledEvent
+              key={`${rowIndex}${eventIndex}`}
+              date={event.date}
+              text={event.text}
+              name={event.name}
+              imageUrl={event.imageUrl}
+              href='/event_details'
+            />
           ))}
         </Row>
       ))}
