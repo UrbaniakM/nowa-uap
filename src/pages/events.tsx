@@ -41,12 +41,17 @@ const EventColumn = styled(Event)`
 
 const EventsPage: React.FC = () => {
   const { eventsJson: { events } } = useStaticQuery<EventsQuery>(eventsQuery);
-  const eventsRows = chunk(events, 3)
+
+  const currentEvents = events.slice(0, 2);
+  const pastEvents = events.slice(2);
+
+  const eventsCurrentRows = chunk(currentEvents, 3)
+  const eventsPastRows = chunk(pastEvents, 3);
 
   return (
     <div>
       <PageTitle>Aktualne wydarzenia</PageTitle>
-      {eventsRows.map((row, rowIndex) => (
+      {eventsCurrentRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
             <Link to='/event_details'>
@@ -56,6 +61,15 @@ const EventsPage: React.FC = () => {
         </Row>
       ))}
       <PageTitle>Ubiegłe wydarzenia</PageTitle>
+      {eventsPastRows.map((row, rowIndex) => (
+        <Row key={rowIndex}>
+          {row.map((event, eventIndex) => (
+            <Link to='/event_details'>
+              <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
+            </Link>
+          ))}
+        </Row>
+      ))}
     </div>
   )
 }

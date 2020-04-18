@@ -8,4 +8,5 @@ export interface ColorPalette {
   info: CSSProperties['color'];
   whitePrimary: CSSProperties['color'];
   whiteSecondary: CSSProperties['color'];
+  divider: CSSProperties['color'];
 }
