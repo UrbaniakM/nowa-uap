@@ -6,7 +6,7 @@ export const typographyTheme: TypographyTheme = {
   header1: {
     fontFamily: SOURCE_SANS_PRO_FONT,
     fontSize: 34,
-    fontWeight: 300,
+    fontWeight: 400
   },
   header2: {
     fontFamily: SOURCE_SANS_PRO_FONT,
