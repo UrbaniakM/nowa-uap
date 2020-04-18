@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, CardContent, Divider, Typography } from 'components/';
+import { OutlinedCard, CardContent, Divider, Typography } from 'components/';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -11,10 +11,6 @@ export interface EventProps {
   imageUrl: string;
   className?: string;
 }
-
-const StyledCard = styled(Card)`
-  border: 1px solid ${props => props.theme.colorPalette.divider};
-`
 
 const StyledCardContent = styled(CardContent)`
   display: flex;
@@ -45,7 +41,7 @@ const EventImg = styled.img`
 
 export const Event: React.FC<EventProps> = ({ name, date, text, href, imageUrl, className }) => {
   return (
-    <StyledCard className={className}>
+    <OutlinedCard className={className}>
       <EventImg src={imageUrl} />
       <StyledCardContent>
         <Typography variant='subtitle'>
@@ -68,6 +64,6 @@ export const Event: React.FC<EventProps> = ({ name, date, text, href, imageUrl, 
           </Row>
         </CardContentFooter>
       </StyledCardContent>
-    </StyledCard>
+    </OutlinedCard>
   )
 }

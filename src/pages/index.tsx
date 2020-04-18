@@ -1,3 +1,12 @@
-import StatutePage from './statute';
+import * as React from 'react';
+import { PageTitle } from 'components/';
 
-export default StatutePage;
+const HomePage: React.FC = () => {
+  return (
+    <div>
+      <PageTitle>Aktualności</PageTitle>
+      
+    </div>
+  )
+}
+export default HomePage;

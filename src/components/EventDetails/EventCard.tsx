@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card } from 'components/';
+import { ElevatedCard } from 'components/';
 import styled from 'styled-components';
 import eventDetails from './event_details.jpeg';
 
@@ -17,15 +17,14 @@ export interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ children, className }) => {
   return (
-    <Card className={className}>
+    <ElevatedCard className={className}>
       <ImageEvent src={eventDetails} />
       {children}
-    </Card>
+    </ElevatedCard>
   )
 }
 
 const StyledEventCard = styled(EventCard)`
-  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
   background-color: ${props => props.theme.colorPalette.divider};
 `
 
