@@ -8,5 +8,5 @@ export const Card = styled.div`
 `
 
 export const CardContent = styled.div`
-  padding: ${props => props.theme.spacing(4)};
+  padding: ${props => props.theme.spacing(2)};
 `

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Event } from 'components/Event';
+import { PageTitle, Typography } from 'components/';
 import styled from 'styled-components';
 import chunk from 'lodash/chunk';
 
@@ -40,20 +41,21 @@ const EventColumn = styled(Event)`
 
 const EventsPage: React.FC = () => {
   const { eventsJson: { events } } = useStaticQuery<EventsQuery>(eventsQuery);
-  const eventsRows = chunk(events, 2)
+  const eventsRows = chunk(events, 3)
 
   return (
     <div>
-      <div>Wydarzenia - aktualne i przeszłe</div>
-        {eventsRows.map((row, rowIndex) => (
-          <Row key={rowIndex}>
-            {row.map((event, eventIndex) => (
-              <Link to='/event_details'>
-                <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
-              </Link>
-            ))}
-          </Row>
-        ))}
+      <PageTitle>Aktualne wydarzenia</PageTitle>
+      {eventsRows.map((row, rowIndex) => (
+        <Row key={rowIndex}>
+          {row.map((event, eventIndex) => (
+            <Link to='/event_details'>
+              <EventColumn key={`${rowIndex} ${eventIndex}`} date={event.date} name={event.name} />
+            </Link>
+          ))}
+        </Row>
+      ))}
+      <PageTitle>Ubiegłe wydarzenia</PageTitle>
     </div>
   )
 }

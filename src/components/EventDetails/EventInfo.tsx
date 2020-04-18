@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { CardContent, Typography } from 'components/';
+import { Typography } from 'components/';
 import { EventIcon, RoomIcon, ScheduleIcon } from 'components/Icons';
 
 const Row = styled.div`
@@ -19,14 +19,13 @@ const StyledEventIcon = RowIcon(EventIcon);
 const StyledRoomIcon = RowIcon(RoomIcon);
 const StyledScheduleIcon = RowIcon(ScheduleIcon);
 
-const StyledCardContent = styled(CardContent)`
-  padding-top: ${props => props.theme.spacing(1)};
-  padding-bottom: ${props => props.theme.spacing(1)};
+const EventInfoCardContent = styled.div`
+  padding: ${props => props.theme.spacing(1, 4)};
 `
 
 export const EventInfo: React.FC = () => {
   return (
-    <StyledCardContent>
+    <EventInfoCardContent>
       <Row>
         <StyledRoomIcon />
         <Typography variant='header3'>Miejsce:</Typography>
@@ -42,6 +41,6 @@ export const EventInfo: React.FC = () => {
         <Typography variant='header3'>Godzina:</Typography>
         <Typography variant='subtitle'>17:30</Typography>
       </Row>
-    </StyledCardContent>
+    </EventInfoCardContent>
   )
 }
