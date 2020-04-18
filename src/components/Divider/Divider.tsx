@@ -6,7 +6,7 @@ export const BaseDivider = styled.div`
   margin: 0;
   border: none;
   flexShrink: 0;
-  background-color: ${props => props.theme.colorPalette.textSecondary};
+  background-color: ${props => props.theme.colorPalette.divider};
 `
 
 export const MiddleDivider = styled(BaseDivider)`
