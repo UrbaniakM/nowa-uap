@@ -5,7 +5,7 @@ import { InterfacesLogo } from 'components/Logos/InterfacesLogo';
 
 const FooterWrapper = styled.div`
   background-color: ${props => props.theme.colorPalette.textPrimary};
-  margin-top: ${props => props.theme.spacing(6)};
+  margin-top: ${props => props.theme.spacing(8)};
 `
 
 const FooterContent = styled.div`

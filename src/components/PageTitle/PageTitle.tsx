@@ -10,7 +10,7 @@ export type PageTitleProps = Omit<TypographyProps, 'variant'>;
 
 export const PageTitle: React.FC<PageTitleProps> = ({ children, className }) => {
   return (
-    <StyledPageTitle variant='header1'>
+    <StyledPageTitle variant='header1' className={className}>
       {children}
     </StyledPageTitle>
   )

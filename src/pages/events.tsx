@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Event } from 'components/Event';
-import { PageTitle, Typography } from 'components/';
+import { PageTitle } from 'components/';
 import styled from 'styled-components';
 import chunk from 'lodash/chunk';
 
@@ -29,13 +29,17 @@ interface EventsQuery {
   }
 }
 
+const EventPageTitle = styled(PageTitle)`
+  margin-bottom: ${props => props.theme.spacing(1)};
+`
+
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   min-height: 394px;
-  margin: ${props => props.theme.spacing(-1)};
+  margin: ${props => props.theme.spacing(1, -1)};
 `
 
 const StyledEvent = styled(Event)`
@@ -61,7 +65,7 @@ const EventsPage: React.FC = () => {
 
   return (
     <div>
-      <PageTitle>Aktualne wydarzenia</PageTitle>
+      <EventPageTitle>Aktualne wydarzenia</EventPageTitle>
       {eventsCurrentRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
@@ -76,7 +80,7 @@ const EventsPage: React.FC = () => {
           ))}
         </Row>
       ))}
-      <PageTitle>Ubiegłe wydarzenia</PageTitle>
+      <EventPageTitle>Ubiegłe wydarzenia</EventPageTitle>
       {eventsPastRows.map((row, rowIndex) => (
         <Row key={rowIndex}>
           {row.map((event, eventIndex) => (
