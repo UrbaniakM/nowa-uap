@@ -15,6 +15,7 @@ const FooterContent = styled.div`
   margin: ${props => props.theme.spacing(4, 6)};
   min-height: 100px;
   justify-content: flex-end;
+  max-width: 1200px;
 `
 
 const FooterLogo = styled(InterfacesLogo)`
