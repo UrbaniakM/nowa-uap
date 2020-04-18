@@ -24,6 +24,7 @@ const EventCard: React.FC<EventCardProps> = ({ children, className }) => {
 
 const StyledEventCard = styled(EventCard)`
   box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.12);
 `
 
 export { StyledEventCard as EventCard };

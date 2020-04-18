@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   border-radius: ${props => props.theme.shape.borderRadius}px;
-  background-color: rgba(0, 0, 0, 0.12);
   max-width: 700px;
 `
 
