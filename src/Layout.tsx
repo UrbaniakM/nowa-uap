@@ -28,13 +28,14 @@ const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   & > * {
     width: 100%;
   }
 `
 
 const AppContent = styled.div`
-  margin: ${props => props.theme.spacing(0, 6)};
+  margin: ${props => props.theme.spacing(0, 6, 8)};
   max-width: 1200px;
   min-height: 500px;
 `
