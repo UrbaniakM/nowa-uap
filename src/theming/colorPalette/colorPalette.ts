@@ -8,4 +8,5 @@ export const colorPaletteTheme: ColorPalette = {
   info: 'green',
   whitePrimary: '#FFF',
   whiteSecondary:  'rgba(255, 255, 255, 0.87)',
+  divider: 'rgba(0, 0,  0, 0.12)'
 }
