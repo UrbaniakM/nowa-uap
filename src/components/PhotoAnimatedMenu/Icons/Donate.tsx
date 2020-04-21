@@ -4,12 +4,12 @@ import { keyframes, css } from "styled-components";
 const heartAnimationT = keyframes`
   0% { transform: translate(0px,0px); animation-timing-function: cubic-bezier(0.42,0,1,1); } 
   38.4615% { transform: translate(12px,12px); } 
-  100% { transform: translate(12px,12px); } }
+  100% { transform: translate(12px,12px); }
 `;
 const heartAnimationD = keyframes`
   0% { d: path('M12,21.35C12,21.35,10.55,20.03,10.55,20.03C5.4,15.36,2,12.28,2,8.5C2,5.42,4.42,3,7.5,3C9.24,3,10.91,3.81,12,5.09C13.09,3.81,14.76,3,16.5,3C19.58,3,22,5.42,22,8.5C22,12.28,18.6,15.36,13.45,20.04C13.45,20.04,12,21.35,12,21.35Z'); animation-timing-function: cubic-bezier(0.42,0,1,1); } 
   38.4615% { d: path('M0,10C-2.25332,10,-4.33257,9.25472,-6.0047,7.9972C-8.43092,6.17257,-10,3.26953,-10,0C-10,-3.26953,-8.43092,-6.17257,-6.0047,-7.9972C-4.33257,-9.25472,-2.25332,-10,0,-10C2.25332,-10,4.33257,-9.25472,6.0047,-7.9972C8.43092,-6.17257,10,-3.26953,10,0C10,3.26953,8.43092,6.17257,6.0047,7.9972C4.33257,9.25472,2.25332,10,0,10Z'); } 
-  100% { d: path('M0,10C-2.25332,10,-4.33257,9.25472,-6.0047,7.9972C-8.43092,6.17257,-10,3.26953,-10,0C-10,-3.26953,-8.43092,-6.17257,-6.0047,-7.9972C-4.33257,-9.25472,-2.25332,-10,0,-10C2.25332,-10,4.33257,-9.25472,6.0047,-7.9972C8.43092,-6.17257,10,-3.26953,10,0C10,3.26953,8.43092,6.17257,6.0047,7.9972C4.33257,9.25472,2.25332,10,0,10Z'); } }
+  100% { d: path('M0,10C-2.25332,10,-4.33257,9.25472,-6.0047,7.9972C-8.43092,6.17257,-10,3.26953,-10,0C-10,-3.26953,-8.43092,-6.17257,-6.0047,-7.9972C-4.33257,-9.25472,-2.25332,-10,0,-10C2.25332,-10,4.33257,-9.25472,6.0047,-7.9972C8.43092,-6.17257,10,-3.26953,10,0C10,3.26953,8.43092,6.17257,6.0047,7.9972C4.33257,9.25472,2.25332,10,0,10Z'); }
 `;
 
 const heartAnimationStyles = css`
@@ -22,12 +22,12 @@ const insideCircleAnimationT = keyframes`
   53.8461% { transform: translate(11.5px,11.0172px) scale(1.1,1.1) translate(-3.092px,-4.99379px); animation-timing-function: cubic-bezier(0.42,0,0.58,1); } 
   69.2307% { transform: translate(11.5px,11.0172px) scale(1,1) translate(-3.092px,-4.99379px); animation-timing-function: cubic-bezier(0.42,0,0.58,1); } 
   84.6153% { transform: translate(11.5px,11.0172px) scale(1.1,1.1) translate(-3.092px,-4.99379px); animation-timing-function: cubic-bezier(0.42,0,0.58,1); } 
-  100% { transform: translate(11.5px,11.0172px) scale(1,1) translate(-3.092px,-4.99379px); } }
+  100% { transform: translate(11.5px,11.0172px) scale(1,1) translate(-3.092px,-4.99379px); }
 `;
 const insideCircleAnimationO = keyframes`
   0% { opacity: 0; animation-timing-function: steps(1); } 
   38.4615% { opacity: 1; } 
-  100% { opacity: 1; } }
+  100% { opacity: 1; }
 `;
 
 const insideCircleStyles = css`
