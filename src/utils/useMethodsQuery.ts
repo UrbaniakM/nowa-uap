@@ -16,8 +16,8 @@ export interface MethodsQuery {
     title: string;
     content: {
       item: string;
-    }[]
-  }
+    }[];
+  };
 }
 
 export const useMethodsQuery = () => {

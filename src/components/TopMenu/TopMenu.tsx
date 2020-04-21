@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components'
-import { Link } from './components';
 import { BlackNowaLogo } from 'components/Logos/BlackNowaLogo';
 import { useRoutingQuery } from 'utils/useRoutingQuery';
+import { Link } from './components';
 
 const Wrapper = styled.div`
   display: flex;

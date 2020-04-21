@@ -6,11 +6,11 @@ export const spacingFunction: SpacingFunction =
     (...args: any[]) => {
       if(args.length === 4) {
         return `${baseMultiplier * args[0]}px ${baseMultiplier * args[1]}px ${baseMultiplier * args[2]}px ${baseMultiplier * args[3]}px`
-      } else if(args.length === 3) {
+      } if(args.length === 3) {
         return `${baseMultiplier * args[0]}px ${baseMultiplier * args[1]}px ${baseMultiplier * args[2]}px`
       }
-      else if(args.length === 2) {
+      if(args.length === 2) {
         return `${baseMultiplier * args[0]}px ${baseMultiplier * args[1]}px`
       }
-      else return `${baseMultiplier * args[0]}px`
-}
+      return `${baseMultiplier * args[0]}px`
+    }

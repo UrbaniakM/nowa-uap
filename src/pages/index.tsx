@@ -21,19 +21,19 @@ const HomePage: React.FC = () => {
           Vivamus sollicitudin vestibulum mauris, et fringilla urna elementum in.
           Curabitur mattis libero sit amet lorem sagittis cursus.
           Phasellus consequat velit vitae mollis auctor.
-      </News>
+        </News>
         <News title='Wciąż trwa zbiórka'>
           Interdum et malesuada fames ac ante ipsum primis in faucibus.
           Vivamus ac lectus rutrum, commodo orci id, sodales lorem.
           Etiam faucibus venenatis nisl, vel dictum sem semper vitae.
-      </News>
+        </News>
         <News title='Zrealizowaliśmy cele na 2020 rok'>
           Duis in tristique erat.
           Phasellus vel commodo massa.
           Cras metus nisi, posuere nec egestas ac, aliquet vel libero.
           Fusce cursus at ex id dignissim.
           Suspendisse in elit eros.
-      </News>
+        </News>
       </Row>
     </div>
   )

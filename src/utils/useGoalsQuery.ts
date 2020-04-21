@@ -16,8 +16,8 @@ export interface GoalsQuery {
     title: string;
     content: {
       item: string;
-    }[]
-  }
+    }[];
+  };
 }
 
 export const useGoalsQuery = () => {

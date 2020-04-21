@@ -19,9 +19,9 @@ export interface RoutingQuery {
       pages: {
         name: string;
         route: string;
-      }[]
-    }
-  }
+      }[];
+    };
+  };
 }
 
 export const useRoutingQuery = () => {

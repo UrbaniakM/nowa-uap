@@ -1,9 +1,9 @@
 import * as React from 'react';
 
+import styled from 'styled-components';
 import { PhotoUAP } from './PhotoUAP';
 import { MenuItem } from './MenuItem';
 import { DonateAnimatedIcon, EventsAnimatedIcon, ContactAnimatedIcon, StatuteAnimatedIcon } from './Icons';
-import styled from 'styled-components';
 
 const Row = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const PhotoAnimatedMenu: React.FC = () => {
           </MenuItem>
           <MenuItem icon={<DonateAnimatedIcon />}>
             Wesprzyj naszą działalność
-        </MenuItem>
+          </MenuItem>
         </Row>
         <Row>
           <MenuItem icon={<EventsAnimatedIcon />}>

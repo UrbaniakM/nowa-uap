@@ -25,8 +25,8 @@ interface EventsQuery {
       text: string;
       date: string;
       imageUrl: string;
-    }[]
-  }
+    }[];
+  };
 }
 
 const EventPageTitle = styled(PageTitle)`

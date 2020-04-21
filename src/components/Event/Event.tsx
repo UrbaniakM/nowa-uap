@@ -59,7 +59,7 @@ export const Event: React.FC<EventProps> = ({ name, date, text, href, imageUrl, 
             <Link to={href}>
               <Typography variant='button'>
                 Przeczytaj więcej
-            </Typography>
+              </Typography>
             </Link>
           </Row>
         </CardContentFooter>
