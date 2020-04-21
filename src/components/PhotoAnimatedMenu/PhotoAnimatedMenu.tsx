@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { PhotoUAP } from './PhotoUAP';
 import { MenuItem } from './MenuItem';
-import { DonateAnimatedIcon, EventsAnimatedIcon } from './Icons';
+import { DonateAnimatedIcon, EventsAnimatedIcon, ContactAnimatedIcon } from './Icons';
 import styled from 'styled-components';
 
 const Row = styled.div`
@@ -33,7 +33,7 @@ export const PhotoAnimatedMenu: React.FC = () => {
           <MenuItem icon={<EventsAnimatedIcon />}>
             Weź udział w wydarzeniach fundacji
           </MenuItem>
-          <MenuItem icon={<div />}>
+          <MenuItem icon={<ContactAnimatedIcon />}>
             Skontaktuj się z nami
           </MenuItem>
         </Row>
