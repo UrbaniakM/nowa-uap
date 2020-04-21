@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PageTitle, News } from 'components/';
+import { PageTitle, News, PhotoAnimatedMenu } from 'components/';
 import styled from 'styled-components';
 
 const Row = styled.div`
@@ -15,6 +15,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <PageTitle>Aktualności</PageTitle>
+      <PhotoAnimatedMenu />
       <Row>
         <News title='Studenci i ich nowa hala'>
           Vivamus sollicitudin vestibulum mauris, et fringilla urna elementum in.

@@ -5,5 +5,6 @@ export * from './Footer';
 export * from './ListItem';
 export * from './News';
 export * from './PageTitle';
+export * from './PhotoAnimatedMenu';
 export * from './TopMenu';
 export * from './Typography';
