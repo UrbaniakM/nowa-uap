@@ -7,9 +7,11 @@
       "modules": true
     }
   },
-  "plugins": ["@typescript-eslint", "prettier"],
-  "extends": ["airbnb", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint", "prettier",  "react-hooks"],
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
-    "@typescript-eslint/indent": [2, 2]
+    "@typescript-eslint/indent": [2, 2],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
