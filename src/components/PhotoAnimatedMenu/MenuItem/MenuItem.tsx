@@ -5,9 +5,15 @@ import { MenuIcon } from './MenuIcon';
 
 const Row = styled.div`
   display: flex;
+  background-color: ${props => props.theme.colorPalette.textSecondary};
+  border-radius: 40px;
   align-items: center;
+  margin: ${props => props.theme.spacing(0, 1)};
   & > :first-child {
-    margin: ${props => props.theme.spacing(0, 3)};
+    margin-left: ${props => props.theme.spacing(1)};
+  }
+  & > :nth-child(2) {
+    margin-right: ${props => props.theme.spacing(4)};
   }
 `
 

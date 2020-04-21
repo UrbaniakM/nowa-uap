@@ -12,9 +12,9 @@ const Row = styled.div`
 
 const Menu = styled.div`
   position: absolute;
-  width: 800px;
-  top: calc(50% - 120px);
-  left: calc(50% - 400px);
+  width: 840px;
+  top: calc(50% - 160px);
+  left: calc(50% - 420px);
 `
 
 export const PhotoAnimatedMenu: React.FC = () => {
