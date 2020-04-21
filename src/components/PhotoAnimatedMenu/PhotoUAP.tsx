@@ -10,7 +10,7 @@ const Photo = styled.img`
   object-fit: cover;
   width: 100%;
   max-height: 768px;
-  filter: contrast(0.5);
+  filter: brightness(0.4);
 `
 
 export const PhotoUAP: React.FC = ({ children }) => {
